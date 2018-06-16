@@ -4,6 +4,6 @@
 # \ \  _-/ \ \___  \  \ \  __ \  \ \ \_\ \  \ \  __\ 
 #  \ \_\    \/\_____\  \ \_\ \_\  \ \_____\  \ \_\   
 #   \/_/     \/_____/   \/_/\/_/   \/_____/   \/_/   
-# A POSIX replacement for GNU shuf
+# A POSIX replacement for GNU shuf -R
 
 awk 'BEGIN {srand(); OFMT="%.17f"} {print rand(), $0}' "$@" | sort -k1,1n | cut -d ' ' -f2-;
